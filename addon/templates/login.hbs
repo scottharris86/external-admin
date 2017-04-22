@@ -1,0 +1,47 @@
+{{flash-message errors=errors }}
+<form>
+<div class="row">
+    <div class="col-xs-10 col-md-5 col-lg-5 col-xl-4 login-form">
+        <div class="row">
+            <div class="col-xs-11 col-sm-9 col-md-10 col-lg-9 col-centered">
+                <img class="img-responsive center-block logo-img" src="../assets/img/logo-login@2x.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11 col-sm-9 col-md-10 col-lg-9 col-centered">
+                <div class="controls">
+                {{input value=email type="email" name="email" class="fm-text-input center-block" placeholder="Email or Username"}}
+                {{input value=password type="password" name="password" class="fm-text-input" placeholder="Password"}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <div class="checkbox outter-checkbox">
+                  <label>
+                    <input name="remember-me" type="checkbox" class="fm-checkbox">Remember Me
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+                <div class="col-xs-11 col-md-10 col-sm-9 col-lg-9 col-centered">
+                    {{#if isLoggingIn}}
+                        <button type="submit" {{action "login"}} class="login-btn"><span class="fa fa-spinner fa-pulse fa-2x fa-fw"></span></button>
+                    {{else}}
+                        <button type="submit" {{action "login"}} class="login-btn">Login</button>
+                    {{/if}}
+                </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12 text-center">
+                <a class="forgot-password" href="/">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+
