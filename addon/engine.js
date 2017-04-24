@@ -6,14 +6,14 @@ import config from './config/environment';
 const { modulePrefix } = config;
 const Eng = Engine.extend({
   modulePrefix,
-  Resolver,
+  Resolver
 
-  dependencies: {
-    services: [
-      'store',
-      'session'
-    ]
-  }
+  // dependencies: {
+  //   services: [
+  //     'store',
+  //     'session'
+  //   ]
+  // }
 
 });
 
