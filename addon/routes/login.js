@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
+        isLoggingIn: false,
+
     setupController: function(controller, model) {
         // Call _super for default behavior
         this._super(controller, model);
