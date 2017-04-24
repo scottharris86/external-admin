@@ -6,15 +6,7 @@ import config from './config/environment';
 const { modulePrefix } = config;
 const Eng = Engine.extend({
   modulePrefix,
-  Resolver,
-
-  dependencies: {
-    services: [
-      'store',
-      'session'
-    ]
-  }
-
+  Resolver
 });
 
 loadInitializers(Eng, modulePrefix);
