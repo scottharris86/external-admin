@@ -5,6 +5,7 @@ export default Ember.Route.extend({
         isLoggingIn: false,
 
     setupController: function(controller, model) {
+        debugger;
         // Call _super for default behavior
         this._super(controller, model);
         // Implement your custom setup after
