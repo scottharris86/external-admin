@@ -5,7 +5,7 @@ export default JSONAPIAdapter.extend({
    session: Ember.inject.service('session'),
    headers: Ember.computed('session.apiKey', function() {
        return {
-           'JSESSIONID': this.get('session.apiKey')
+           'Authorization': 'Bearer '+this.get('session.apiKey')
        };
    }),
    shouldReloadRecord() {
