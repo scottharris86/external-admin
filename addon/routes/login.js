@@ -58,21 +58,20 @@ export default Ember.Route.extend({
     },
 
     activate () {
-        
+        Ember.$('nav').addClass('hidden');
+        Ember.$('.body').addClass('login');
 
 
-        afterRender(this, function() {
-            Ember.$('nav').addClass('hidden');
-            Ember.$('.body').addClass('login');
-        });
+        // afterRender(this, function() {
+            
+        // });
 
     },
 
     deactivate () {
         // Ember.$('body').removeClass('login');
-        afterRender(this, function() {
-            Ember.$('.body').addClass('login');
-            Ember.$('nav').removeClass('hidden');
-        });
+        Ember.$('.body').addClass('login');
+        Ember.$('nav').removeClass('hidden');
+        
     }
 });
