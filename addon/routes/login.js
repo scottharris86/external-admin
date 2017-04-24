@@ -58,7 +58,7 @@ export default Ember.Route.extend({
     },
 
     activate () {
-        Ember.$('nav').addClass('hidden');
+        Ember.$('.navbar').addClass('hidden');
         Ember.$('.body').addClass('login');
 
 
@@ -71,7 +71,7 @@ export default Ember.Route.extend({
     deactivate () {
         // Ember.$('body').removeClass('login');
         Ember.$('.body').addClass('login');
-        Ember.$('nav').removeClass('hidden');
+        Ember.$('.navbar').removeClass('hidden');
         
     }
 });
