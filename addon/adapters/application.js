@@ -1,4 +1,4 @@
-import JSONAPIAdapter from 'ember-data/adapters/json-api';
+import JSONAPIAdapter from 'ember-data/adapters/json';
 import Ember from 'ember';
 import DS from "ember-data";
 import ENV from 'external-admin/config/environment';
@@ -9,7 +9,8 @@ export default JSONAPIAdapter.extend({
    session: Ember.inject.service('session'),
    headers: Ember.computed('session.apiKey', function() {
        return {
-           'Authorization': 'Bearer '+this.get('session.apiKey')
+           'Authorization': 'Bearer '+this.get('session.apiKey'),
+           'Content-Type': 'application/json'
        };
    }),
    shouldReloadRecord() {
