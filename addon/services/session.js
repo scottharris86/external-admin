@@ -32,12 +32,12 @@ export default Ember.Service.extend({
         return this.get('apiKey') != null;
     },
 
-    userChanged: function() {
-        if (this.isAuthenticated() === true) {
-            this.get('store').findRecord('user', 'current_user').then((user) => {
-                this.set('currentUser', user);
-            });
-        }
+    // userChanged: function() {
+    //     if (this.isAuthenticated() === true) {
+    //         this.get('store').findRecord('user', 'current_user').then((user) => {
+    //             this.set('currentUser', user);
+    //         });
+    //     }
 
-    }.on('init').observes('apiKey')
+    // }.on('init').observes('apiKey')
 });
