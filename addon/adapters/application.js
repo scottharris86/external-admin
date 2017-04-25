@@ -1,4 +1,4 @@
-import JSONAPIAdapter from 'ember-data/adapters/json';
+import JSONAPIAdapter from 'ember-data/adapters/json-api';
 import Ember from 'ember';
 import DS from "ember-data";
 import ENV from 'external-admin/config/environment';
