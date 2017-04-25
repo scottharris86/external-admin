@@ -31,7 +31,7 @@ export default Ember.Route.extend({
                 contentType: "application/json",
                 dataType: "json",
                 async: false,
-                data: JSON.stringify({email: email, password: password}),
+                data: JSON.stringify({username: email, password: password}),
                 success: function(params, textStatus, jqXHR) {
                     debugger;
                     that.store.pushPayload(params);
