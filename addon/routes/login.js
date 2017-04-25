@@ -26,7 +26,7 @@ export default Ember.Route.extend({
             $.ajax({
                 type: "POST",
                 // url: "http://staging.9sdmsq8sir.us-east-1.elasticbeanstalk.com/login",
-                url: "http://localhost:8080/admin/login",
+                url: "http://localhost:8080/api/login",
                 // url: "http://stage.api.fmex.io/login",
                 contentType: "application/json",
                 dataType: "json",
