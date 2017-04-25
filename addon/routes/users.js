@@ -4,6 +4,6 @@ export default Ember.Route.extend({
     // store: Ember.inject.service(),
     model() {
         debugger;
-        return this.get('store').findAll('station');
+        return this.store.findAll('station');
     }
 });
